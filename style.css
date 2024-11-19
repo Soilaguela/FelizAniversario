@@ -58,7 +58,7 @@
   .hidden {
     opacity: 0;
     animation: fadeIn 3s ease-in-out forwards;
-    animation-delay: 15s; /* Aparece após 15 segundos */
+    animation-delay: 18s; /* Aparece após 18 segundos */
   }
   
   .music-control {
