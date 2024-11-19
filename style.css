@@ -56,9 +56,10 @@
   }
   
   .hidden {
+    color: #ea552f;
     opacity: 0;
     animation: fadeIn 3s ease-in-out forwards;
-    animation-delay: 18s; /* Aparece após 18 segundos */
+    animation-delay: 19s; /* Aparece após 19 segundos */
   }
   
   .music-control {
