@@ -1,76 +1,141 @@
+/* Animação FadeIn */
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-20px);
-    }
-    60% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fbe7c6;
-    color: #2d3436;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    padding: 20px;
-    overflow: hidden;
-    animation: fadeIn 3s ease-in-out;
-  }
-  
-  h1 {
-    font-size: 3em;
-    color: #e17055;
-    margin-bottom: 10px;
-    animation: bounce 2s infinite;
-  }
-  
-  p {
-    font-size: 1.5em;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    animation: fadeIn 3s ease-in-out;
-  }
-  
-  footer {
-    margin-top: 20px;
-    font-size: 1em;
-    color: #636e72;
-    animation: fadeIn 3s ease-in-out;
-  }
-  
-  .hidden {
-    color: #ea552f;
+  from {
     opacity: 0;
-    animation: fadeIn 3s ease-in-out forwards;
-    animation-delay: 19s; /* Aparece após 19 segundos */
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animação Bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fbe7c6;
+  color: #2d3436;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  animation: fadeIn 3s ease-in-out;
+}
+
+h1 {
+  font-size: 3em;
+  color: #e17055;
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  animation: fadeIn 3s ease-in-out;
+  margin: 10px;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #636e72;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.hidden {
+  color: #d64b28;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+  animation-delay: 19s; /* Aparece após 15 segundos */
+}
+
+.music-control {
+  position: sticky;
+  bottom: 20px;
+  right: 20px;
+  background: #e17055;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+/* Media Queries - Tornando o site responsivo */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em; /* Ajuste no tamanho do título em telas menores */
+  }
+
+  p {
+    font-size: 1.2em; /* Texto menor para caber melhor em telas menores */
+  }
+
+  footer {
+    font-size: 0.8em; /* Reduzir o tamanho da fonte do rodapé em dispositivos móveis */
+  }
+
   .music-control {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: #e17055;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.8em; /* Ajuste no tamanho do botão de controle de música */
   }
-  
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em; /* Título menor para dispositivos ainda mais estreitos */
+  }
+
+  p {
+    font-size: 1.1em; /* Ajuste no texto para telas muito pequenas */
+  }
+
+  footer {
+    font-size: 0.7em; /* Rodapé ainda menor em telas pequenas */
+  }
+
+  .music-control {
+    font-size: 0.7em; /* Botão de música bem pequeno em telas pequenas */
+  }
+}
+
+@media (min-width: 320px) and (max-width: 505px) {
+  body {
+    overflow: auto; /* Ativa o scroll */
+    height: auto;   /* Permite que o conteúdo ultrapasse a altura da tela */
+  }
+
+  /* Ajustes de tamanho para garantir que o conteúdo se ajuste nas telas pequenas */
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  footer {
+    font-size: 0.7em;
+  }
+
+  .music-control {
+    font-size: 0.7em;
+  }
+}
